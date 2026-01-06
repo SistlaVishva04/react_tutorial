@@ -1,0 +1,19 @@
+{
+  "name": "reactday3",
+  "version": "1.0.0",
+  "description": "react with parcel",
+  "license": "ISC",
+  "author": "Vishva",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.3"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
