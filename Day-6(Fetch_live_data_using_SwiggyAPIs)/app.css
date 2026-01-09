@@ -1,0 +1,215 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+}
+
+/* ===== Layout Wrapper ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+.header-inner img {
+  
+  width: 70px;
+  height:70px;
+
+}
+
+.nav-items {
+  margin-left: auto;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+
+.nav-items li {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-items li:hover {
+  background-color: #f2f2f2;
+}
+
+/* ===== Body ===== */
+.body {
+  padding: 30px 0;
+}
+
+/* ===== Search Bar ===== */
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #fc8019;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #fc8019;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e57010;
+}
+
+/* ===== Restaurant Grid ===== */
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== Restaurant Card ===== */
+.restaurant-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.restaurant-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* Text */
+.restaurant-card h3 {
+  margin: 12px;
+  font-size: 18px;
+}
+
+.restaurant-card p {
+  margin: 4px 12px 8px;
+  font-size: 14px;
+  color: #555;
+}
+/* ===== Footer ===== */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 20px 0;
+  border : 1px solid black;
+}
+#author {
+  color: #fc8019;
+  font-weight: bold;
+}
+
+
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.shimmer-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.shimmer-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #eee 25%,
+    #ddd 37%,
+    #eee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.shimmer-line {
+  height: 14px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #eee 25%,
+    #ddd 37%,
+    #eee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.shimmer-line.title {
+  height: 18px;
+  width: 70%;
+}
+
+.shimmer-line.short {
+  width: 50%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
